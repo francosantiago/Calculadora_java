@@ -15,7 +15,7 @@ public class Calculadora
     {
         double num1 = obtenerNumero("Ingrese el primer número:");
         double num2 = obtenerNumero("Ingrese el segundo número:");
-        String[] operaciones = {"Sumar", "Restar", "Multiplicar", "Dividir"};
+        String[] operaciones = {"Sumar", "Restar", "Multiplicar", "Dividir","Potencia","Logaritmo"};
         int opcion = obtenerOpcion("Seleccione la operación a realizar:", operaciones);
         
         switch (opcion) 
@@ -31,6 +31,12 @@ public class Calculadora
                 break;
             case 3:
                 mostrarResultado(num1 / num2);
+                break;
+            case 4:
+                mostrarResultado(Math.pow(num1, num2));
+                break;
+            case 5:
+                mostrarResultado(Math.log(num1));
                 break;
             default:
                 break;
